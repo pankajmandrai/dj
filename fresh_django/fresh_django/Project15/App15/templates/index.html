@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <script>
+        function fun() {
+            res = document.getElementById('hero').value
+            window.location.href = "/gethero/?hero="+res
+
+        }
+    </script>
+</head>
+<body>
+
+<table align="center">
+    <tr>
+        <th>Select Your Hero</th>
+    </tr>
+    <tr>
+        <td align="center">
+            <select name="heros" onchange="fun()" id="hero">
+                <option>Select</option>
+                <option>Aamir</option>
+                <option>Akshay</option>
+                <option>Arjun</option>
+                <option>Ajay</option>
+                <option>Salman</option>
+                <option>Sharukh</option>
+                <option>Sharman</option>
+                <option>Varun</option>
+            </select>
+
+        </td>
+    </tr>
+    <tr>
+        {% if hero %}
+            <td>
+                <img src="{% static 'images/'  %}{{ hero }}.jpg" width="300" height="300">
+            </td>
+        {% endif %}
+    </tr>
+</table>
+</body>
+</html>
