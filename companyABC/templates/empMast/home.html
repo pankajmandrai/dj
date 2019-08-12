@@ -1,0 +1,58 @@
+{% extends 'empMast/base.html' %}
+
+{% block content %}
+    <div id="page-wrapper">
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Customer Details"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 360,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 79.45, label: "Success"},
+			{y: 7.31, label: "Errors"},
+
+		]
+	}]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chartContainer2",
+    {
+        animationEnabled: true,
+        title: {
+            text: "Customer Details"
+        },
+        data: [
+        {
+            type: "pie",
+            showInLegend: true,
+            dataPoints: [
+                { y: 4181563, legendText: "Success", indexLabel: "Success" },
+                { y: 2175498, legendText: "Errors", indexLabel: "Errors" },
+
+            ]
+        },
+        ]
+    });
+chart.render();
+}
+</script>
+    </div>
+<div id="chartContainer" style="height: 245px; width: 90%;"></div>
+<div id="chartContainer2" style="height: 245px; width: 90%;"></div>
+<center><h3>Addtional Reference Number</h3> </center>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+        <!-- /.container-fluid -->
+    <!-- /#page-wrapper -->
+<!-- /#wrapper -->
+{% endblock %}
+
