@@ -1,0 +1,12 @@
+
+<html>
+    <body>
+        <form action="/show/" method="post">
+            {% csrf_token %}
+            <input type="number" placeholder="IDNO" required name="t1"> <br><br>
+            <input type="text" placeholder="NAME" required name="t2"> <br><br>
+            <input type="number" placeholder="SALARY" required name="t3"> <br><br>
+            <button type="submit">Show</button>
+        </form>
+    </body>
+</html>
