@@ -1,0 +1,11 @@
+
+<form action="/show/" method="post">
+    {% csrf_token %}
+    <input type="password" placeholder="Password" name="t1">
+    <button type="submit">Post</button>
+</form>
+
+<form action="/show/" method="get">
+    <input type="password" placeholder="Password" name="t2">
+    <button type="submit">Get</button>
+</form>

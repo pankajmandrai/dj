@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<script src="{% static 'js/sample.js'%}"></script>
+    <table align="center">
+        <tr>
+            <td>
+                <input type="text" name="t1" placeholder="Name" id="name">
+                &nbsp;<font color="#a52a2a"><span id="count"color="blue"></span></font>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">
+                <input type="submit" value="Count" onclick="fun1()">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="password" placeholder="Password" id="password">
+                &nbsp;<font color="red"><span id="red"></span></font>
+                &nbsp;<font color="blue"><span id="blue"></span></font>
+                &nbsp;<font color="#ff7f50"><span id="yellow"></span></font>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">
+                <input type="submit" value="Strength" onclick="fun2()">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
