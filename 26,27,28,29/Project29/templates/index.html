@@ -1,0 +1,37 @@
+
+<table align="center" border="2">
+    <tr>
+        <th>IDNO</th>
+        <th>NAME</th>
+        <th>SALARY</th>
+    </tr>
+
+    {% for x in page %}
+        <tr>
+        <th>{{ x.idno }}</th>
+        <th>{{ x.name }}</th>
+        <th>{{ x.salary }}</th>
+    </tr>
+    {% endfor %}
+
+    <tr>
+        <th>
+            {% if page.has_previous %}
+                <a href="/index/?page_no={{ page.previous_page_number }}">
+                    Previous
+                </a>
+            {% endif %}
+        </th>
+        <th></th>
+
+        <th>
+            {% if page.has_next %}
+                <a href="/index/?page_no={{ page.next_page_number }}">
+                    Next
+                </a>
+            {% endif %}
+        </th>
+    </tr>
+
+
+</table>
